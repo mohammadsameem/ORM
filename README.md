@@ -62,8 +62,8 @@ admin.site.register(Employee, EmployeeAdmin)
 ```
 
 ## OUTPUT
-<img width="1909" height="898" alt="Screenshot 2025-11-30 002054" src="https://github.com/user-attachments/assets/0814b593-1d7b-4a24-9fbf-caee99dfe1cb" />
 
+<img width="1910" height="879" alt="Screenshot 2025-11-30 002938" src="https://github.com/user-attachments/assets/31e0ea00-7dee-4ccc-9848-034ce667100d" />
 
 
 ## RESULT
