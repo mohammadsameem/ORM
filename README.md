@@ -38,25 +38,32 @@ Execute Django admin using localhost and create details for 10 entries
 ```
 models.py
 from django.db import models
-from django.contrib import admin
-class Car(models.Model):
-    car_id=models.IntegerField(primary_key=True)
-    brand=models.CharField(max_length=20)
-    car_model=models.CharField(max_length=20)
-    cos_email=models.EmailField()
-    dop=models.DateField()
-class CarAdmin(admin.ModelAdmin):
-    list_display=['car_id','brand','car_model','cos_email','dop']
+class Employee(models.Model):
+    eid = models.CharField(max_length=20, primary_key=True)
+    name = models.CharField(max_length=100)
+    salary = models.IntegerField()
+    age = models.IntegerField()
+    email = models.EmailField()
+
+    def __str__(self):
+        return self.name
+
 ```
 ```
 admin .py
 from django.contrib import admin
-from.models import Car,CarAdmin
-admin.site.register(Car,CarAdmin)
+from .models import Employee
+
+class EmployeeAdmin(admin.ModelAdmin):
+    list_display = ('eid', 'name', 'salary', 'age', 'email')
+
+admin.site.register(Employee, EmployeeAdmin)
+
 ```
 
 ## OUTPUT
-![alt text](<Screenshot 2025-11-29 233624.png>)
+<img width="1909" height="898" alt="Screenshot 2025-11-30 002054" src="https://github.com/user-attachments/assets/0814b593-1d7b-4a24-9fbf-caee99dfe1cb" />
+
 
 
 ## RESULT
