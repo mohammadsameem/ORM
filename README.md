@@ -35,8 +35,9 @@ Apply the migration files of the created app to the database
 Execute Django admin using localhost and create details for 10 entries
 
 ## PROGRAM
+Models.py
 ```
-models.py
+
 from django.db import models
 class Employee(models.Model):
     eid = models.CharField(max_length=20, primary_key=True)
@@ -49,8 +50,9 @@ class Employee(models.Model):
         return self.name
 
 ```
+Admin.py
 ```
-admin .py
+
 from django.contrib import admin
 from .models import Employee
 
